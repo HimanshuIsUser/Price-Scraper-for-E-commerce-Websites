@@ -7,17 +7,19 @@ from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.support.ui import Select
 from selenium.common.exceptions import  NoSuchElementException, TimeoutException, WebDriverException
+from selenium.webdriver.common.by import By
 import time
+
 
 
 class ECommerceWebsiteScrapping:
 
     def __init__(self):
-        self.url = 'https://www.ebay.com/'
+        self.url = 'https://www.ebay.com'
         self.categories = []
 
         # fetch all the available categories
-        self.fetch_categories()
+        # self.fetch_categories()
 
     # request call to provided url and return its response
     def call_url(self,url=None):
@@ -84,10 +86,15 @@ class ECommerceWebsiteScrapping:
     # Collect products from website
     def get_products(self):
             driver = webdriver.Chrome()
-            driver.get(self.url)
-            time.sleep()
-            element = driver.find_element('class','vl-flyout-nav__container')
-            print(element)
+            driver.get(f'{self.url}/globaldeals')
+            time.sleep(2)
+            element = driver.find_element(by=By.CLASS_NAME, value='navigation-desktop')
+            ul = element.find_element(by=By.CLASS_NAME, value='ebayui-refit-nav-ul')
+            list_li = ul.find_element(by=By.XPATH, value='.//li')
+            for i in list_li:
+                print(i.text)
+
+            driver.quit()
 
 def main():
     e_commerce_website = ECommerceWebsiteScrapping()
