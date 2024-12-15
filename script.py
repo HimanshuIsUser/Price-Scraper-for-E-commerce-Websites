@@ -81,9 +81,17 @@ class ECommerceWebsiteScrapping:
             if driver:
                 driver.quit()
 
+    # Collect products from website
+    def get_products(self):
+            driver = webdriver.Chrome()
+            driver.get(self.url)
+            time.sleep()
+            element = driver.find_element('class','vl-flyout-nav__container')
+            print(element)
 
 def main():
     e_commerce_website = ECommerceWebsiteScrapping()
+    e_commerce_website.get_products()
     print('script executed..',e_commerce_website.categories)
 
 
