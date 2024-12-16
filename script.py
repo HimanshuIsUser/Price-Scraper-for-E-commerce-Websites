@@ -2,6 +2,8 @@ import pdb
 import requests
 import html5lib
 from bs4 import BeautifulSoup
+import html
+
 
 # selenium
 from selenium import webdriver
@@ -84,22 +86,37 @@ class ECommerceWebsiteScrapping:
                 driver.quit()
 
     # Collect products from website
-    def get_products(self):
+    def get_deals_category(self):
+        try:
             driver = webdriver.Chrome()
             driver.get(f'{self.url}/globaldeals')
             time.sleep(2)
             element = driver.find_element(by=By.CLASS_NAME, value='navigation-desktop')
             ul = element.find_element(by=By.CLASS_NAME, value='ebayui-refit-nav-ul')
-            list_li = ul.find_element(by=By.XPATH, value='.//li')
+            list_li = ul.find_elements(by=By.XPATH, value='.//li')
+            category_data = {}
             for i in list_li:
-                print(i.text)
+                category_data[i.text] = {}
+                div_element = i.find_elements(by=By.CLASS_NAME,value='navigation-desktop-flyout-col')
+                for div in div_element:
+                    options = div.find_elements(by=By.TAG_NAME, value='a')
 
-            driver.quit()
+                    for option in options:                        
+                        href = option.get_attribute('href')
+                        inner_html = option.get_attribute('innerHTML')
+                        text = html.unescape(inner_html)
+                        category_data[i.text][text] = [text,href]
+            return category_data
+        except Exception as e:
+            print('An Unexpected error : ', str(e))
+        finally:
+            if driver:
+                driver.quit()
 
 def main():
     e_commerce_website = ECommerceWebsiteScrapping()
-    e_commerce_website.get_products()
-    print('script executed..',e_commerce_website.categories)
+    category_data = e_commerce_website.get_deals_category()
+    print('script executed..',category_data)
 
 
 if __name__=="__main__":
