@@ -12,6 +12,8 @@ from selenium.common.exceptions import  NoSuchElementException, TimeoutException
 from selenium.webdriver.common.by import By
 import time
 
+import logging
+
 
 
 class ECommerceWebsiteScrapping:
@@ -112,6 +114,17 @@ class ECommerceWebsiteScrapping:
         finally:
             if driver:
                 driver.quit()
+
+    # Save data in csv file
+    def store_data_in_csv(self,filename,content):
+        try:
+            with open(f'{filename}.csv','a') as file:
+                file.writelines(content)
+            print('Product has been saved in csv file')
+        except Exception as e:
+            print('An Unexpected error occur : ',str(e))
+
+
 
 def main():
     e_commerce_website = ECommerceWebsiteScrapping()
