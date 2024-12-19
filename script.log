@@ -1,0 +1,29 @@
+2024-12-19 23:15:00,090 Selenium Manager binary found at: C:\Users\rohit\OneDrive\Documents\Scrapping\Price Scraper for E-commerce Websites\env\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe
+2024-12-19 23:15:00,090 Executing process: C:\Users\rohit\OneDrive\Documents\Scrapping\Price Scraper for E-commerce Websites\env\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --debug --language-binding python --output json
+2024-12-19 23:15:00,886 chromedriver not found in PATH
+2024-12-19 23:15:00,886 chrome detected at C:\Program Files\Google\Chrome\Application\chrome.exe
+2024-12-19 23:15:00,886 Running command: wmic datafile where name='C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe' get Version /value
+2024-12-19 23:15:00,886 Output: "\r\r\n\r\r\nVersion=131.0.6778.140\r\r\n\r\r\n\r\r\n\r"
+2024-12-19 23:15:00,886 Detected browser: chrome 131.0.6778.140
+2024-12-19 23:15:00,886 Required driver: chromedriver 131.0.6778.204
+2024-12-19 23:15:00,886 chromedriver 131.0.6778.204 already in the cache
+2024-12-19 23:15:00,886 Driver path: C:\Users\rohit\.cache\selenium\chromedriver\win64\131.0.6778.204\chromedriver.exe
+2024-12-19 23:15:00,886 Browser path: C:\Program Files\Google\Chrome\Application\chrome.exe
+2024-12-19 23:15:00,891 Started executable: `C:\Users\rohit\.cache\selenium\chromedriver\win64\131.0.6778.204\chromedriver.exe` in a child process with pid: 8776 using 0 to output -3
+2024-12-19 23:15:01,412 POST http://localhost:57658/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'chrome', 'pageLoadStrategy': <PageLoadStrategy.normal: 'normal'>, 'browserVersion': None, 'goog:chromeOptions': {'extensions': [], 'binary': 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe', 'args': []}}}}
+2024-12-19 23:15:01,414 Starting new HTTP connection (1): localhost:57658
+2024-12-19 23:15:02,303 http://localhost:57658 "POST /session HTTP/11" 200 0
+2024-12-19 23:15:02,303 Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"131.0.6778.140","chrome":{"chromedriverVersion":"131.0.6778.204 (52183f9e99a61056f9b78535f53d256f1516f2a0-refs/branch-heads/6778_155@{#7})","userDataDir":"C:\\Users\\rohit\\AppData\\Local\\Temp\\scoped_dir8776_1960784863"},"fedcm:accounts":true,"goog:chromeOptions":{"debuggerAddress":"localhost:57662"},"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"windows","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"86e5725133a2d1a082de412c8f870455"}} | headers=HTTPHeaderDict({'Content-Length': '884', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-12-19 23:15:02,303 Finished Request
+2024-12-19 23:15:02,303 POST http://localhost:57658/session/86e5725133a2d1a082de412c8f870455/url {'url': 'https://www.ebay.com/globaldeals'}
+2024-12-19 23:15:04,249 http://localhost:57658 "POST /session/86e5725133a2d1a082de412c8f870455/url HTTP/11" 200 0
+2024-12-19 23:15:04,249 Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-12-19 23:15:04,249 Finished Request
+2024-12-19 23:15:06,252 POST http://localhost:57658/session/86e5725133a2d1a082de412c8f870455/element {'using': 'css selector', 'value': '.navigation-desktop'}
+2024-12-19 23:15:06,252 http://localhost:57658 "POST /session/86e5725133a2d1a082de412c8f870455/element HTTP/11" 404 0
+2024-12-19 23:15:06,252 Remote response: status=404 | data={"value":{"error":"no such window","message":"no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome=131.0.6778.140)","stacktrace":"\tGetHandleVerifier [0x00007FF71036FB05+28789]\n\t(No symbol) [0x00007FF7102D86E0]\n\t(No symbol) [0x00007FF71017592A]\n\t(No symbol) [0x00007FF71014F505]\n\t(No symbol) [0x00007FF7101F6477]\n\t(No symbol) [0x00007FF71020EF42]\n\t(No symbol) [0x00007FF7101EF1E3]\n\t(No symbol) [0x00007FF7101BA938]\n\t(No symbol) [0x00007FF7101BBAA1]\n\tGetHandleVerifier [0x00007FF7106A933D+3410093]\n\tGetHandleVerifier [0x00007FF7106BE7DD+3497293]\n\tGetHandleVerifier [0x00007FF7106B2A73+3448803]\n\tGetHandleVerifier [0x00007FF710437BBB+848171]\n\t(No symbol) [0x00007FF7102E3C3F]\n\t(No symbol) [0x00007FF7102DF6E4]\n\t(No symbol) [0x00007FF7102DF87D]\n\t(No symbol) [0x00007FF7102CED49]\n\tBaseThreadInitThunk [0x00007FFE27D4259D+29]\n\tRtlUserThreadStart [0x00007FFE2926AF38+40]\n"}} | headers=HTTPHeaderDict({'Content-Length': '962', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-12-19 23:15:06,252 Finished Request
+2024-12-19 23:15:06,270 DELETE http://localhost:57658/session/86e5725133a2d1a082de412c8f870455 {}
+2024-12-19 23:15:06,272 http://localhost:57658 "DELETE /session/86e5725133a2d1a082de412c8f870455 HTTP/11" 200 0
+2024-12-19 23:15:06,272 Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-12-19 23:15:06,272 Finished Request

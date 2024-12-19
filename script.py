@@ -15,6 +15,14 @@ import time
 import logging
 
 
+logging.basicConfig(filename='script.log',
+                    format='%(asctime)s %(message)s',
+                    filemode='w',
+                    level=logging.DEBUG
+                    )
+
+logger = logging.getLogger()
+
 
 class ECommerceWebsiteScrapping:
 
@@ -123,6 +131,8 @@ class ECommerceWebsiteScrapping:
             print('Product has been saved in csv file')
         except Exception as e:
             print('An Unexpected error occur : ',str(e))
+            logger.error(f"Error generating CSV file: {e}", exc_info=True)
+
 
 
 
