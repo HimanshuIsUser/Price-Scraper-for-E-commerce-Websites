@@ -95,7 +95,7 @@ class ECommerceWebsiteScrapping:
             if driver:
                 driver.quit()
 
-    # Collect products from website
+    # Collect products categories from website
     def get_deals_category(self):
         try:
             driver = webdriver.Chrome()
@@ -123,6 +123,24 @@ class ECommerceWebsiteScrapping:
             if driver:
                 driver.quit()
 
+    # collect products
+    def get_products(self):
+        try:
+            driver = webdriver.Chrome()
+            driver.get(f'{self.url}/globaldeals/home/more-home-garden/')
+            time.sleep(2)
+            element_div = driver.find_element(by=By.CLASS_NAME,value='sections-container')
+            if not element_div:
+                print('No element found products')
+            parent_div = element_div.find_element(by=By.CLASS_NAME,value='no-category-dropdown')
+            products_div = parent_div.find_element(by=By.CLASS_NAME,value='spoke-itemgrid-container')
+            container_div = products_div.find_element(by=By.ID, value='spokeResultSet')
+            collection_div = container_div.find_element(by=By.CLASS_NAME,value='item-grid-spoke')
+            products = collection_div.find_elements(by=By.CLASS_NAME,value='col')
+            logger.info('products scrap completed.')
+        except Exception as e:
+            print(str(e))
+
     # Save data in csv file
     def store_data_in_csv(self,filename,content):
         try:
@@ -138,7 +156,7 @@ class ECommerceWebsiteScrapping:
 
 def main():
     e_commerce_website = ECommerceWebsiteScrapping()
-    category_data = e_commerce_website.get_deals_category()
+    category_data = e_commerce_website.get_products()
     print('script executed..',category_data)
 
 
