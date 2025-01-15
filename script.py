@@ -137,11 +137,13 @@ class ECommerceWebsiteScrapping:
             container_div = products_div.find_element(by=By.ID, value='spokeResultSet')
             collection_div = container_div.find_element(by=By.CLASS_NAME,value='item-grid-spoke')
             products = collection_div.find_elements(by=By.CLASS_NAME,value='col')
+            products_url = []
             for i in products:
                 detail_element = i.find_element(by=By.CLASS_NAME,value='dne-itemtile-detail')
                 a_tag = detail_element.find_element(by=By.TAG_NAME,value='a')
-                print(a_tag.href)
+                products_url.append(a_tag.get_attribute('href'))
             logger.info('products scrap completed.')
+            return products_url
         except Exception as e:
             print(str(e))
 
