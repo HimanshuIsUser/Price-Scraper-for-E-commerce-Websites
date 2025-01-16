@@ -28,7 +28,7 @@ class ECommerceWebsiteScrapping:
 
     def __init__(self):
         self.url = 'https://www.ebay.com'
-        self.categories = []
+        self.categories = {}
 
         # fetch all the available categories
         # self.fetch_categories()
@@ -116,6 +116,8 @@ class ECommerceWebsiteScrapping:
                         inner_html = option.get_attribute('innerHTML')
                         text = html.unescape(inner_html)
                         category_data[i.text][text] = [text,href]
+
+            self.categories = category_data
             return category_data
         except Exception as e:
             print('An Unexpected error : ', str(e))
@@ -124,10 +126,10 @@ class ECommerceWebsiteScrapping:
                 driver.quit()
 
     # collect products
-    def get_products(self):
+    def get_products(self,category_path='https://www.ebay.com/globaldeals/home/more-home-garden'):
         try:
             driver = webdriver.Chrome()
-            driver.get(f'{self.url}/globaldeals/home/more-home-garden/')
+            driver.get(f'{category_path}')
             time.sleep(2)
             element_div = driver.find_element(by=By.CLASS_NAME,value='sections-container')
             if not element_div:
@@ -157,13 +159,23 @@ class ECommerceWebsiteScrapping:
             print('An Unexpected error occur : ',str(e))
             logger.error(f"Error generating CSV file: {e}", exc_info=True)
 
-
+    def data_collection_from_categories(self):
+        try:
+            list_of_all_urls = []
+            for k,v in self.categories.items():
+                for name, detail in v.items():
+                    products_url = self.get_products(category_path = detail[1])
+                    list_of_all_urls += products_url
+            return list_of_all_urls
+        except Exception as e:
+            pass
 
 
 def main():
     e_commerce_website = ECommerceWebsiteScrapping()
-    category_data = e_commerce_website.get_products()
-    print('script executed..',category_data)
+    collect_categories = e_commerce_website.get_deals_category()
+    products_url_for_all_urls = e_commerce_website.data_collection_from_categories()
+    print('script executed..', products_url_for_all_urls)
 
 
 if __name__=="__main__":
