@@ -164,8 +164,9 @@ class ECommerceWebsiteScrapping:
             list_of_all_urls = []
             for k,v in self.categories.items():
                 for name, detail in v.items():
-                    products_url = self.get_products(category_path = detail[1])
-                    list_of_all_urls += products_url
+                    print(detail[1])
+                    # products_url = self.get_products(category_path = detail[1])
+                    # list_of_all_urls += products_url
             return list_of_all_urls
         except Exception as e:
             pass
