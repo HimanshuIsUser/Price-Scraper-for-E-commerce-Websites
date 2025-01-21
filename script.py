@@ -22,7 +22,7 @@ logging.basicConfig(filename='script.log',
                     )
 
 logger = logging.getLogger()
-
+import pdb
 
 class ECommerceWebsiteScrapping:
 
@@ -131,6 +131,7 @@ class ECommerceWebsiteScrapping:
             driver = webdriver.Chrome()
             driver.get(f'{category_path}')
             time.sleep(2)
+            products_url = []
             element_div = driver.find_element(by=By.CLASS_NAME,value='sections-container')
             if not element_div:
                 print('No element found products')
@@ -139,15 +140,20 @@ class ECommerceWebsiteScrapping:
             container_div = products_div.find_element(by=By.ID, value='spokeResultSet')
             collection_div = container_div.find_element(by=By.CLASS_NAME,value='item-grid-spoke')
             products = collection_div.find_elements(by=By.CLASS_NAME,value='col')
-            products_url = []
             for i in products:
                 detail_element = i.find_element(by=By.CLASS_NAME,value='dne-itemtile-detail')
                 a_tag = detail_element.find_element(by=By.TAG_NAME,value='a')
                 products_url.append(a_tag.get_attribute('href'))
             logger.info('products scrap completed.')
-            return products_url
+            print(products_url,'category_path : ', category_path)
         except Exception as e:
             print(str(e))
+        finally:
+            if driver:
+                driver.quit()
+            return products_url
+                
+        
 
     # Save data in csv file
     def store_data_in_csv(self,filename,content):
@@ -162,11 +168,12 @@ class ECommerceWebsiteScrapping:
     def data_collection_from_categories(self):
         try:
             list_of_all_urls = []
+            print(self.categories)
             for k,v in self.categories.items():
                 for name, detail in v.items():
                     print(detail[1])
-                    # products_url = self.get_products(category_path = detail[1])
-                    # list_of_all_urls += products_url
+                    products_url = self.get_products(category_path = detail[1])
+                    list_of_all_urls += products_url
             return list_of_all_urls
         except Exception as e:
             pass
