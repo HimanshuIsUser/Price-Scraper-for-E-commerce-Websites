@@ -29,6 +29,7 @@ class ECommerceWebsiteScrapping:
     def __init__(self):
         self.url = 'https://www.ebay.com'
         self.categories = {}
+        self.driver = None
 
         # fetch all the available categories
         # self.fetch_categories()
@@ -128,11 +129,14 @@ class ECommerceWebsiteScrapping:
     # collect products
     def get_products(self,category_path='https://www.ebay.com/globaldeals/home/more-home-garden'):
         try:
-            driver = webdriver.Chrome()
-            driver.get(f'{category_path}')
+            if self.driver is None:
+                self.driver = webdriver.Chrome()
+                self.driver.get(f'{category_path}')
+            else:
+                self.driver.get(f'{category_path}')
             time.sleep(2)
             products_url = []
-            element_div = driver.find_element(by=By.CLASS_NAME,value='sections-container')
+            element_div = self.driver.find_element(by=By.CLASS_NAME,value='sections-container')
             if not element_div:
                 print('No element found products')
             parent_div = element_div.find_element(by=By.CLASS_NAME,value='no-category-dropdown')
@@ -145,12 +149,9 @@ class ECommerceWebsiteScrapping:
                 a_tag = detail_element.find_element(by=By.TAG_NAME,value='a')
                 products_url.append(a_tag.get_attribute('href'))
             logger.info('products scrap completed.')
-            print(products_url,'category_path : ', category_path)
         except Exception as e:
             print(str(e))
         finally:
-            if driver:
-                driver.quit()
             return products_url
                 
         
@@ -171,12 +172,18 @@ class ECommerceWebsiteScrapping:
             print(self.categories)
             for k,v in self.categories.items():
                 for name, detail in v.items():
-                    print(detail[1])
                     products_url = self.get_products(category_path = detail[1])
                     list_of_all_urls += products_url
-            return list_of_all_urls
         except Exception as e:
             pass
+        finally:
+            print('driver got closed')
+            if self.driver is not None:
+                self.driver.quit()
+                self.driver = None
+            return list_of_all_urls
+
+
 
 
 def main():
