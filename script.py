@@ -3,8 +3,8 @@ import requests
 import html5lib
 from bs4 import BeautifulSoup
 import html
-
-
+import os
+import csv
 # selenium
 from selenium import webdriver
 from selenium.webdriver.support.ui import Select
@@ -13,6 +13,7 @@ from selenium.webdriver.common.by import By
 import time
 
 import logging
+import datetime
 
 
 logging.basicConfig(filename='script.log',
@@ -135,7 +136,7 @@ class ECommerceWebsiteScrapping:
             else:
                 self.driver.get(f'{category_path}')
             time.sleep(2)
-            products_url = []
+            products_details = []
             element_div = self.driver.find_element(by=By.CLASS_NAME,value='sections-container')
             if not element_div:
                 print('No element found products')
@@ -145,22 +146,42 @@ class ECommerceWebsiteScrapping:
             collection_div = container_div.find_element(by=By.CLASS_NAME,value='item-grid-spoke')
             products = collection_div.find_elements(by=By.CLASS_NAME,value='col')
             for i in products:
+
+                # image extractor
+                detail_element_image = i.find_element(by=By.CLASS_NAME,value='dne-itemtile-imagewrapper')
+                image_element = detail_element_image.find_element(by=By.TAG_NAME,value='img')
+                image_src = image_element.get_attribute('src')
+        
+                # details extractor
                 detail_element = i.find_element(by=By.CLASS_NAME,value='dne-itemtile-detail')
                 a_tag = detail_element.find_element(by=By.TAG_NAME,value='a')
-                products_url.append(a_tag.get_attribute('href'))
+                url = a_tag.get_attribute('href')
+
+                # extract title
+                title_element = a_tag.find_element(by=By.TAG_NAME,value='h3')
+                title = title_element.get_attribute('title')
+
+                # price extractor
+                price_div = detail_element.find_element(by=By.CLASS_NAME,value='dne-itemtile-price')
+                price_span = price_div.find_element(by=By.CLASS_NAME,value='first')
+                price = price_span.text
+
+                # append details in list
+                products_details.append([title,url,image_src,price])
+
             logger.info('products scrap completed.')
         except Exception as e:
             print(str(e))
         finally:
-            return products_url
+            return products_details
                 
-        
-
     # Save data in csv file
     def store_data_in_csv(self,filename,content):
         try:
+            append_column_in_data = content.insert(0,['title','url','image_src','price'])
             with open(f'{filename}.csv','a') as file:
-                file.writelines(content)
+                writer = csv.writer(file)
+                writer.writerows(content)
             print('Product has been saved in csv file')
         except Exception as e:
             print('An Unexpected error occur : ',str(e))
@@ -168,12 +189,12 @@ class ECommerceWebsiteScrapping:
 
     def data_collection_from_categories(self):
         try:
-            list_of_all_urls = []
+            list_of_products_details = []
             print(self.categories)
             for k,v in self.categories.items():
                 for name, detail in v.items():
-                    products_url = self.get_products(category_path = detail[1])
-                    list_of_all_urls += products_url
+                    products_details = self.get_products(category_path = detail[1])
+                    list_of_products_details += products_details
         except Exception as e:
             pass
         finally:
@@ -181,16 +202,38 @@ class ECommerceWebsiteScrapping:
             if self.driver is not None:
                 self.driver.quit()
                 self.driver = None
-            return list_of_all_urls
+            return list_of_products_details
 
+    # handle the case if categories urls does not store yet
+    def scrape_data(self):
+        try:
+            scrapped_data = []
+            if len(self.categories) >0:
+                scrapped_data = self.data_collection_from_categories()
+            else:
+                scrapped_data = self.get_products()
+        except Exception as e:
+            print(str(e))
+        finally:
+            return scrapped_data
 
 
 
 def main():
+    # initialize our main class
     e_commerce_website = ECommerceWebsiteScrapping()
+
+    # comment given line to extract data only for single url
     collect_categories = e_commerce_website.get_deals_category()
-    products_url_for_all_urls = e_commerce_website.data_collection_from_categories()
-    print('script executed..', products_url_for_all_urls)
+
+    # will collect the data for all categories urls or pre_define url
+    scrapped_data = e_commerce_website.scrape_data()
+
+    # store data in csv file
+    store_data_in_csv = e_commerce_website.store_data_in_csv(f'Ebay_Products_{datetime.datetime.now().timestamp()}',scrapped_data)
+
+    # final results print here
+    print('script executed..')
 
 
 if __name__=="__main__":
