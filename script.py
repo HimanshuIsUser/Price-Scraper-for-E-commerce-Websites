@@ -11,6 +11,7 @@ from selenium.webdriver.support.ui import Select
 from selenium.common.exceptions import  NoSuchElementException, TimeoutException, WebDriverException
 from selenium.webdriver.common.by import By
 import time
+import json
 
 import logging
 import datetime
@@ -167,7 +168,7 @@ class ECommerceWebsiteScrapping:
                 price = price_span.text
 
                 # append details in list
-                products_details.append([title,url,image_src,price])
+                products_details.append({'title':title,'url':url,'image_src':image_src,'price':price})
 
             logger.info('products scrap completed.')
         except Exception as e:
@@ -178,15 +179,17 @@ class ECommerceWebsiteScrapping:
     # Save data in csv file
     def store_data_in_csv(self,filename,content):
         try:
-            append_column_in_data = content.insert(0,['title','url','image_src','price'])
             with open(f'{filename}.csv','a') as file:
-                writer = csv.writer(file)
+                fieldnames = ['title','url','image_src','price']
+                writer = csv.DictWriter(file,fieldnames=fieldnames)
+                writer.writeheader()
                 writer.writerows(content)
             print('Product has been saved in csv file')
         except Exception as e:
             print('An Unexpected error occur : ',str(e))
             logger.error(f"Error generating CSV file: {e}", exc_info=True)
 
+    # scrape data from categories link
     def data_collection_from_categories(self):
         try:
             list_of_products_details = []
@@ -217,6 +220,12 @@ class ECommerceWebsiteScrapping:
         finally:
             return scrapped_data
 
+    # save data in json
+    def data_into_json(self,file_name, data):
+        dump = json.dumps(data, indent=4)
+        with open(f'{file_name}.json','a') as json_file:
+            json_file.writelines(dump)
+            json_file.close()
 
 
 def main():
@@ -224,13 +233,16 @@ def main():
     e_commerce_website = ECommerceWebsiteScrapping()
 
     # comment given line to extract data only for single url
-    collect_categories = e_commerce_website.get_deals_category()
+    # collect_categories = e_commerce_website.get_deals_category()
 
     # will collect the data for all categories urls or pre_define url
     scrapped_data = e_commerce_website.scrape_data()
 
     # store data in csv file
-    store_data_in_csv = e_commerce_website.store_data_in_csv(f'Ebay_Products_{datetime.datetime.now().timestamp()}',scrapped_data)
+    # store_data_in_csv = e_commerce_website.store_data_in_csv(f'Ebay_Products_{datetime.datetime.now().timestamp()}',scrapped_data)
+
+    # store data in json file
+    store_data_in_json = e_commerce_website.data_into_json(f'Ebay_Products_{datetime.datetime.now().timestamp()}',scrapped_data)
 
     # final results print here
     print('script executed..')
