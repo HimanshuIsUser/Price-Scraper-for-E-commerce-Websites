@@ -12,7 +12,7 @@ from selenium.common.exceptions import  NoSuchElementException, TimeoutException
 from selenium.webdriver.common.by import By
 import time
 import json
-
+import sys
 import logging
 import datetime
 
@@ -173,6 +173,7 @@ class ECommerceWebsiteScrapping:
             logger.info('products scrap completed.')
         except Exception as e:
             print(str(e))
+            logger.error(f"Error while scrapping the data : {e}", exc_info=True)
         finally:
             return products_details
                 
@@ -185,6 +186,7 @@ class ECommerceWebsiteScrapping:
                 writer.writeheader()
                 writer.writerows(content)
             print('Product has been saved in csv file')
+            logger.info('products details saved in csv file.')
         except Exception as e:
             print('An Unexpected error occur : ',str(e))
             logger.error(f"Error generating CSV file: {e}", exc_info=True)
@@ -217,18 +219,31 @@ class ECommerceWebsiteScrapping:
                 scrapped_data = self.get_products()
         except Exception as e:
             print(str(e))
+            logger.error(f"Error while handing dynamic categories urls or static url {e}", exc_info=True)
         finally:
             return scrapped_data
 
     # save data in json
     def data_into_json(self,file_name, data):
-        dump = json.dumps(data, indent=4)
-        with open(f'{file_name}.json','a') as json_file:
-            json_file.writelines(dump)
-            json_file.close()
+        try:
+            dump = json.dumps(data, indent=4)
+            with open(f'{file_name}.json','a') as json_file:
+                json_file.writelines(dump)
+                json_file.close()
+            logger.info('products details saved in json file.')
+        except Exception as e:
+            print(str(e))
+            logger.error(f"Error generating json file: {e}", exc_info=True)
 
 
 def main():
+    # command line arguments
+    data_format = 'csv'
+    if len(sys.argv)>1:
+        data_format = sys.argv[1]
+    print(data_format)
+
+
     # initialize our main class
     e_commerce_website = ECommerceWebsiteScrapping()
 
@@ -239,10 +254,12 @@ def main():
     scrapped_data = e_commerce_website.scrape_data()
 
     # store data in csv file
-    # store_data_in_csv = e_commerce_website.store_data_in_csv(f'Ebay_Products_{datetime.datetime.now().timestamp()}',scrapped_data)
+    if data_format =='csv':
+        store_data_in_csv = e_commerce_website.store_data_in_csv(f'Ebay_Products_{datetime.datetime.now().timestamp()}',scrapped_data)
 
     # store data in json file
-    store_data_in_json = e_commerce_website.data_into_json(f'Ebay_Products_{datetime.datetime.now().timestamp()}',scrapped_data)
+    if data_format == 'json':
+        store_data_in_json = e_commerce_website.data_into_json(f'Ebay_Products_{datetime.datetime.now().timestamp()}',scrapped_data)
 
     # final results print here
     print('script executed..')
