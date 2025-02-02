@@ -1,621 +1,103 @@
-2025-01-31 14:06:00,099 Selenium Manager binary found at: /Users/workspace/Documents/Scrapping/env/lib/python3.9/site-packages/selenium/webdriver/common/macos/selenium-manager
-2025-01-31 14:06:00,099 Executing process: /Users/workspace/Documents/Scrapping/env/lib/python3.9/site-packages/selenium/webdriver/common/macos/selenium-manager --browser chrome --debug --language-binding python --output json
-2025-01-31 14:06:23,540 Sending stats to Plausible: Props { browser: "chrome", browser_version: "", os: "macos", arch: "x86_64", lang: "python", selenium_version: "4.27" }
-2025-01-31 14:06:23,548 chromedriver not found in PATH
-2025-01-31 14:06:23,549 chrome detected at /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
-2025-01-31 14:06:23,549 Running command: /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --version
-2025-01-31 14:06:23,549 Output: "Google Chrome 132.0.6834.160 "
-2025-01-31 14:06:23,549 Detected browser: chrome 132.0.6834.160
-2025-01-31 14:06:23,550 Discovering versions from https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json
-2025-01-31 14:06:23,550 Required driver: chromedriver 132.0.6834.159
-2025-01-31 14:06:23,550 chromedriver 132.0.6834.159 already in the cache
-2025-01-31 14:06:23,550 Driver path: /Users/workspace/.cache/selenium/chromedriver/mac-x64/132.0.6834.159/chromedriver
-2025-01-31 14:06:23,550 Browser path: /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
-2025-01-31 14:06:23,566 Started executable: `/Users/workspace/.cache/selenium/chromedriver/mac-x64/132.0.6834.159/chromedriver` in a child process with pid: 92551 using 0 to output -3
-2025-01-31 14:06:25,163 POST http://localhost:63105/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'chrome', 'pageLoadStrategy': <PageLoadStrategy.normal: 'normal'>, 'browserVersion': None, 'goog:chromeOptions': {'extensions': [], 'binary': '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome', 'args': []}}}}
-2025-01-31 14:06:25,166 Starting new HTTP connection (1): localhost:63105
-2025-01-31 14:06:32,509 http://localhost:63105 "POST /session HTTP/11" 200 0
-2025-01-31 14:06:32,526 Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"132.0.6834.160","chrome":{"chromedriverVersion":"132.0.6834.159 (2d77d3fc4452661469b78f115e0aed4d71269739-refs/branch-heads/6834@{#4408})","userDataDir":"/var/folders/rg/pg4rq_g14lbdyft_jz32yq980000gn/T/.org.chromium.Chromium.WCHlLQ"},"fedcm:accounts":true,"goog:chromeOptions":{"debuggerAddress":"localhost:63242"},"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"mac","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"91f42e76d26bd82471d97875cd07eb12"}} | headers=HTTPHeaderDict({'Content-Length': '892', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:32,551 Finished Request
-2025-01-31 14:06:32,554 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/url {'url': 'https://www.ebay.com/globaldeals/home/more-home-garden'}
-2025-01-31 14:06:34,187 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/url HTTP/11" 200 0
-2025-01-31 14:06:34,209 Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:34,233 Finished Request
-2025-01-31 14:06:36,237 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element {'using': 'css selector', 'value': '.sections-container'}
-2025-01-31 14:06:36,264 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element HTTP/11" 200 0
-2025-01-31 14:06:36,264 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.28"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:36,264 Finished Request
-2025-01-31 14:06:36,264 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.28/element {'using': 'css selector', 'value': '.no-category-dropdown'}
-2025-01-31 14:06:36,277 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.28/element HTTP/11" 200 0
-2025-01-31 14:06:36,277 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.29"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:36,277 Finished Request
-2025-01-31 14:06:36,277 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.29/element {'using': 'css selector', 'value': '.spoke-itemgrid-container'}
-2025-01-31 14:06:36,287 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.29/element HTTP/11" 200 0
-2025-01-31 14:06:36,288 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.30"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:36,288 Finished Request
-2025-01-31 14:06:36,288 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.30/element {'using': 'css selector', 'value': '[id="spokeResultSet"]'}
-2025-01-31 14:06:36,299 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.30/element HTTP/11" 200 0
-2025-01-31 14:06:36,300 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.31"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:36,300 Finished Request
-2025-01-31 14:06:36,300 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.31/element {'using': 'css selector', 'value': '.item-grid-spoke'}
-2025-01-31 14:06:36,311 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.31/element HTTP/11" 200 0
-2025-01-31 14:06:36,312 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.32"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:36,312 Finished Request
-2025-01-31 14:06:36,312 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.32/elements {'using': 'css selector', 'value': '.col'}
-2025-01-31 14:06:36,323 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.32/elements HTTP/11" 200 0
-2025-01-31 14:06:36,324 Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.33"},{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.34"},{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.21"},{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.35"},{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.36"},{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.37"},{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.38"},{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.39"},{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.40"},{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.41"},{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.42"},{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.43"},{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.44"}]} | headers=HTTPHeaderDict({'Content-Length': '1532', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:36,324 Finished Request
-2025-01-31 14:06:36,324 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.33/element {'using': 'css selector', 'value': '.dne-itemtile-imagewrapper'}
-2025-01-31 14:06:36,334 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.33/element HTTP/11" 200 0
-2025-01-31 14:06:36,334 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.45"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:36,334 Finished Request
-2025-01-31 14:06:36,335 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.45/element {'using': 'tag name', 'value': 'img'}
-2025-01-31 14:06:36,347 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.45/element HTTP/11" 200 0
-2025-01-31 14:06:36,347 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.17"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:36,347 Finished Request
-2025-01-31 14:06:36,351 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/execute/sync {'script': '/* getAttribute */return (function(){return (function(){var d=this||self;function f(a,b){function c(...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.17'}, 'src']}
-2025-01-31 14:06:36,360 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/execute/sync HTTP/11" 200 0
-2025-01-31 14:06:36,360 Remote response: status=200 | data={"value":"https://i.ebayimg.com/images/g/GGIAAOSwUB5m-ZSy/s-l300.jpg"} | headers=HTTPHeaderDict({'Content-Length': '70', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:36,361 Finished Request
-2025-01-31 14:06:36,361 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.33/element {'using': 'css selector', 'value': '.dne-itemtile-detail'}
-2025-01-31 14:06:36,371 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.33/element HTTP/11" 200 0
-2025-01-31 14:06:36,371 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.46"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:36,371 Finished Request
-2025-01-31 14:06:36,371 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.46/element {'using': 'tag name', 'value': 'a'}
-2025-01-31 14:06:36,381 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.46/element HTTP/11" 200 0
-2025-01-31 14:06:36,381 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.47"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:36,382 Finished Request
-2025-01-31 14:06:36,382 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/execute/sync {'script': '/* getAttribute */return (function(){return (function(){var d=this||self;function f(a,b){function c(...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.47'}, 'href']}
-2025-01-31 14:06:36,390 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/execute/sync HTTP/11" 200 0
-2025-01-31 14:06:36,390 Remote response: status=200 | data={"value":"https://www.ebay.com/itm/135276515851?_trkparms=5079%3A5000014571"} | headers=HTTPHeaderDict({'Content-Length': '77', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:36,391 Finished Request
-2025-01-31 14:06:36,391 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.47/element {'using': 'tag name', 'value': 'h3'}
-2025-01-31 14:06:36,404 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.47/element HTTP/11" 200 0
-2025-01-31 14:06:36,404 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.48"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:36,404 Finished Request
-2025-01-31 14:06:36,404 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/execute/sync {'script': '/* getAttribute */return (function(){return (function(){var d=this||self;function f(a,b){function c(...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.48'}, 'title']}
-2025-01-31 14:06:36,411 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/execute/sync HTTP/11" 200 0
-2025-01-31 14:06:36,411 Remote response: status=200 | data={"value":"Makita 9237C 7\" Polisher, Blue"} | headers=HTTPHeaderDict({'Content-Length': '43', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:36,411 Finished Request
-2025-01-31 14:06:36,412 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.46/element {'using': 'css selector', 'value': '.dne-itemtile-price'}
-2025-01-31 14:06:36,423 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.46/element HTTP/11" 200 0
-2025-01-31 14:06:36,423 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.49"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:36,423 Finished Request
-2025-01-31 14:06:36,424 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.49/element {'using': 'css selector', 'value': '.first'}
-2025-01-31 14:06:36,435 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.49/element HTTP/11" 200 0
-2025-01-31 14:06:36,435 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.50"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:36,435 Finished Request
-2025-01-31 14:06:36,435 GET http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.50/text {}
-2025-01-31 14:06:36,455 http://localhost:63105 "GET /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.50/text HTTP/11" 200 0
-2025-01-31 14:06:36,455 Remote response: status=200 | data={"value":"US $244.95"} | headers=HTTPHeaderDict({'Content-Length': '22', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:36,455 Finished Request
-2025-01-31 14:06:36,455 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.34/element {'using': 'css selector', 'value': '.dne-itemtile-imagewrapper'}
-2025-01-31 14:06:36,462 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.34/element HTTP/11" 200 0
-2025-01-31 14:06:36,463 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.51"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:36,463 Finished Request
-2025-01-31 14:06:36,463 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.51/element {'using': 'tag name', 'value': 'img'}
-2025-01-31 14:06:36,469 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.51/element HTTP/11" 200 0
-2025-01-31 14:06:36,469 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.18"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:36,469 Finished Request
-2025-01-31 14:06:36,469 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/execute/sync {'script': '/* getAttribute */return (function(){return (function(){var d=this||self;function f(a,b){function c(...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.18'}, 'src']}
-2025-01-31 14:06:36,474 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/execute/sync HTTP/11" 200 0
-2025-01-31 14:06:36,474 Remote response: status=200 | data={"value":"https://i.ebayimg.com/images/g/AyYAAOSwxxZm2eF5/s-l300.jpg"} | headers=HTTPHeaderDict({'Content-Length': '70', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:36,475 Finished Request
-2025-01-31 14:06:36,475 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.34/element {'using': 'css selector', 'value': '.dne-itemtile-detail'}
-2025-01-31 14:06:36,481 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.34/element HTTP/11" 200 0
-2025-01-31 14:06:36,482 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.52"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:36,482 Finished Request
-2025-01-31 14:06:36,482 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.52/element {'using': 'tag name', 'value': 'a'}
-2025-01-31 14:06:36,491 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.52/element HTTP/11" 200 0
-2025-01-31 14:06:36,491 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.53"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:36,491 Finished Request
-2025-01-31 14:06:36,492 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/execute/sync {'script': '/* getAttribute */return (function(){return (function(){var d=this||self;function f(a,b){function c(...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.53'}, 'href']}
-2025-01-31 14:06:36,499 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/execute/sync HTTP/11" 200 0
-2025-01-31 14:06:36,499 Remote response: status=200 | data={"value":"https://www.ebay.com/itm/134443782124?_trkparms=5079%3A5000014571"} | headers=HTTPHeaderDict({'Content-Length': '77', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:36,499 Finished Request
-2025-01-31 14:06:36,499 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.53/element {'using': 'tag name', 'value': 'h3'}
-2025-01-31 14:06:36,549 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.53/element HTTP/11" 200 0
-2025-01-31 14:06:36,569 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.54"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:36,594 Finished Request
-2025-01-31 14:06:36,595 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/execute/sync {'script': '/* getAttribute */return (function(){return (function(){var d=this||self;function f(a,b){function c(...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.54'}, 'title']}
-2025-01-31 14:06:36,603 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/execute/sync HTTP/11" 200 0
-2025-01-31 14:06:36,620 Remote response: status=200 | data={"value":"WALABOT DIY 2 Advanced Stud Finder and WallScanner for Android and IOS with Case"} | headers=HTTPHeaderDict({'Content-Length': '92', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:36,621 Finished Request
-2025-01-31 14:06:36,621 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.52/element {'using': 'css selector', 'value': '.dne-itemtile-price'}
-2025-01-31 14:06:36,629 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.52/element HTTP/11" 200 0
-2025-01-31 14:06:36,635 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.55"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:36,635 Finished Request
-2025-01-31 14:06:36,660 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.55/element {'using': 'css selector', 'value': '.first'}
-2025-01-31 14:06:36,667 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.55/element HTTP/11" 200 0
-2025-01-31 14:06:36,679 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.56"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:36,679 Finished Request
-2025-01-31 14:06:36,679 GET http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.56/text {}
-2025-01-31 14:06:36,688 http://localhost:63105 "GET /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.56/text HTTP/11" 200 0
-2025-01-31 14:06:36,705 Remote response: status=200 | data={"value":"US $185.99"} | headers=HTTPHeaderDict({'Content-Length': '22', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:36,705 Finished Request
-2025-01-31 14:06:36,705 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.21/element {'using': 'css selector', 'value': '.dne-itemtile-imagewrapper'}
-2025-01-31 14:06:36,713 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.21/element HTTP/11" 200 0
-2025-01-31 14:06:36,732 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.57"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:36,733 Finished Request
-2025-01-31 14:06:36,758 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.57/element {'using': 'tag name', 'value': 'img'}
-2025-01-31 14:06:36,768 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.57/element HTTP/11" 200 0
-2025-01-31 14:06:36,787 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.19"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:36,788 Finished Request
-2025-01-31 14:06:36,788 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/execute/sync {'script': '/* getAttribute */return (function(){return (function(){var d=this||self;function f(a,b){function c(...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.19'}, 'src']}
-2025-01-31 14:06:36,798 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/execute/sync HTTP/11" 200 0
-2025-01-31 14:06:36,798 Remote response: status=200 | data={"value":"https://i.ebayimg.com/images/g/RvwAAOSwZWVnBNZp/s-l300.jpg"} | headers=HTTPHeaderDict({'Content-Length': '70', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:36,798 Finished Request
-2025-01-31 14:06:36,798 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.21/element {'using': 'css selector', 'value': '.dne-itemtile-detail'}
-2025-01-31 14:06:36,806 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.21/element HTTP/11" 200 0
-2025-01-31 14:06:36,806 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.58"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:36,806 Finished Request
-2025-01-31 14:06:36,806 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.58/element {'using': 'tag name', 'value': 'a'}
-2025-01-31 14:06:36,813 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.58/element HTTP/11" 200 0
-2025-01-31 14:06:36,813 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.59"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:36,814 Finished Request
-2025-01-31 14:06:36,814 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/execute/sync {'script': '/* getAttribute */return (function(){return (function(){var d=this||self;function f(a,b){function c(...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.59'}, 'href']}
-2025-01-31 14:06:36,818 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/execute/sync HTTP/11" 200 0
-2025-01-31 14:06:36,818 Remote response: status=200 | data={"value":"https://www.ebay.com/itm/176617236805?_trkparms=5079%3A5000014571"} | headers=HTTPHeaderDict({'Content-Length': '77', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:36,818 Finished Request
-2025-01-31 14:06:36,819 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.59/element {'using': 'tag name', 'value': 'h3'}
-2025-01-31 14:06:36,824 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.59/element HTTP/11" 200 0
-2025-01-31 14:06:36,824 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.60"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:36,824 Finished Request
-2025-01-31 14:06:36,825 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/execute/sync {'script': '/* getAttribute */return (function(){return (function(){var d=this||self;function f(a,b){function c(...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.60'}, 'title']}
-2025-01-31 14:06:36,830 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/execute/sync HTTP/11" 200 0
-2025-01-31 14:06:36,830 Remote response: status=200 | data={"value":"10Pks Make 10 GALLONS- Magichem STRONGEST BLEACH TABLETS - Low as 32¢/gallon 10z"} | headers=HTTPHeaderDict({'Content-Length': '93', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:36,831 Finished Request
-2025-01-31 14:06:36,831 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.58/element {'using': 'css selector', 'value': '.dne-itemtile-price'}
-2025-01-31 14:06:36,838 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.58/element HTTP/11" 200 0
-2025-01-31 14:06:36,838 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.61"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:36,838 Finished Request
-2025-01-31 14:06:36,838 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.61/element {'using': 'css selector', 'value': '.first'}
-2025-01-31 14:06:36,846 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.61/element HTTP/11" 200 0
-2025-01-31 14:06:36,846 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.62"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:36,846 Finished Request
-2025-01-31 14:06:36,846 GET http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.62/text {}
-2025-01-31 14:06:36,853 http://localhost:63105 "GET /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.62/text HTTP/11" 200 0
-2025-01-31 14:06:36,853 Remote response: status=200 | data={"value":"US $9.95"} | headers=HTTPHeaderDict({'Content-Length': '20', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:36,853 Finished Request
-2025-01-31 14:06:36,853 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.35/element {'using': 'css selector', 'value': '.dne-itemtile-imagewrapper'}
-2025-01-31 14:06:36,860 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.35/element HTTP/11" 200 0
-2025-01-31 14:06:36,860 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.63"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:36,860 Finished Request
-2025-01-31 14:06:36,860 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.63/element {'using': 'tag name', 'value': 'img'}
-2025-01-31 14:06:36,866 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.63/element HTTP/11" 200 0
-2025-01-31 14:06:36,866 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.20"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:36,866 Finished Request
-2025-01-31 14:06:36,866 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/execute/sync {'script': '/* getAttribute */return (function(){return (function(){var d=this||self;function f(a,b){function c(...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.20'}, 'src']}
-2025-01-31 14:06:36,870 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/execute/sync HTTP/11" 200 0
-2025-01-31 14:06:36,870 Remote response: status=200 | data={"value":"https://i.ebayimg.com/images/g/-oAAAOSw3ZxniIqo/s-l300.jpg"} | headers=HTTPHeaderDict({'Content-Length': '70', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:36,870 Finished Request
-2025-01-31 14:06:36,870 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.35/element {'using': 'css selector', 'value': '.dne-itemtile-detail'}
-2025-01-31 14:06:36,876 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.35/element HTTP/11" 200 0
-2025-01-31 14:06:36,876 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.64"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:36,876 Finished Request
-2025-01-31 14:06:36,877 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.64/element {'using': 'tag name', 'value': 'a'}
-2025-01-31 14:06:36,882 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.64/element HTTP/11" 200 0
-2025-01-31 14:06:36,882 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.65"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:36,882 Finished Request
-2025-01-31 14:06:36,882 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/execute/sync {'script': '/* getAttribute */return (function(){return (function(){var d=this||self;function f(a,b){function c(...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.65'}, 'href']}
-2025-01-31 14:06:36,887 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/execute/sync HTTP/11" 200 0
-2025-01-31 14:06:36,888 Remote response: status=200 | data={"value":"https://www.ebay.com/itm/395688146596?_trkparms=5079%3A5000014571"} | headers=HTTPHeaderDict({'Content-Length': '77', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:36,888 Finished Request
-2025-01-31 14:06:36,888 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.65/element {'using': 'tag name', 'value': 'h3'}
-2025-01-31 14:06:36,897 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.65/element HTTP/11" 200 0
-2025-01-31 14:06:36,898 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.66"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:36,898 Finished Request
-2025-01-31 14:06:36,898 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/execute/sync {'script': '/* getAttribute */return (function(){return (function(){var d=this||self;function f(a,b){function c(...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.66'}, 'title']}
-2025-01-31 14:06:36,904 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/execute/sync HTTP/11" 200 0
-2025-01-31 14:06:36,904 Remote response: status=200 | data={"value":"DEWALT DCF850P1R 20V MAX ATOMIC 1/4\" Impact Driver Kit 5Ah Certified Refurbished"} | headers=HTTPHeaderDict({'Content-Length': '93', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:36,904 Finished Request
-2025-01-31 14:06:36,904 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.64/element {'using': 'css selector', 'value': '.dne-itemtile-price'}
-2025-01-31 14:06:36,910 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.64/element HTTP/11" 200 0
-2025-01-31 14:06:36,910 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.67"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:36,911 Finished Request
-2025-01-31 14:06:36,911 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.67/element {'using': 'css selector', 'value': '.first'}
-2025-01-31 14:06:36,916 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.67/element HTTP/11" 200 0
-2025-01-31 14:06:36,917 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.68"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:36,917 Finished Request
-2025-01-31 14:06:36,917 GET http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.68/text {}
-2025-01-31 14:06:36,923 http://localhost:63105 "GET /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.68/text HTTP/11" 200 0
-2025-01-31 14:06:36,923 Remote response: status=200 | data={"value":"US $188.99"} | headers=HTTPHeaderDict({'Content-Length': '22', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:36,923 Finished Request
-2025-01-31 14:06:36,923 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.36/element {'using': 'css selector', 'value': '.dne-itemtile-imagewrapper'}
-2025-01-31 14:06:36,929 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.36/element HTTP/11" 200 0
-2025-01-31 14:06:36,929 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.69"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:36,929 Finished Request
-2025-01-31 14:06:36,929 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.69/element {'using': 'tag name', 'value': 'img'}
-2025-01-31 14:06:36,938 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.69/element HTTP/11" 200 0
-2025-01-31 14:06:36,939 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.70"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:36,939 Finished Request
-2025-01-31 14:06:36,939 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/execute/sync {'script': '/* getAttribute */return (function(){return (function(){var d=this||self;function f(a,b){function c(...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.70'}, 'src']}
-2025-01-31 14:06:36,947 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/execute/sync HTTP/11" 200 0
-2025-01-31 14:06:36,947 Remote response: status=200 | data={"value":"https://i.ebayimg.com/images/g/5GEAAOSwLQtmD2Ar/s-l300.jpg"} | headers=HTTPHeaderDict({'Content-Length': '70', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:36,948 Finished Request
-2025-01-31 14:06:36,948 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.36/element {'using': 'css selector', 'value': '.dne-itemtile-detail'}
-2025-01-31 14:06:36,955 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.36/element HTTP/11" 200 0
-2025-01-31 14:06:36,955 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.71"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:36,955 Finished Request
-2025-01-31 14:06:36,955 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.71/element {'using': 'tag name', 'value': 'a'}
-2025-01-31 14:06:36,961 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.71/element HTTP/11" 200 0
-2025-01-31 14:06:36,961 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.72"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:36,961 Finished Request
-2025-01-31 14:06:36,961 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/execute/sync {'script': '/* getAttribute */return (function(){return (function(){var d=this||self;function f(a,b){function c(...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.72'}, 'href']}
-2025-01-31 14:06:36,965 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/execute/sync HTTP/11" 200 0
-2025-01-31 14:06:36,965 Remote response: status=200 | data={"value":"https://www.ebay.com/itm/404902668352?_trkparms=5079%3A5000014571"} | headers=HTTPHeaderDict({'Content-Length': '77', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:36,965 Finished Request
-2025-01-31 14:06:36,965 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.72/element {'using': 'tag name', 'value': 'h3'}
-2025-01-31 14:06:36,971 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.72/element HTTP/11" 200 0
-2025-01-31 14:06:36,971 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.73"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:36,971 Finished Request
-2025-01-31 14:06:36,971 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/execute/sync {'script': '/* getAttribute */return (function(){return (function(){var d=this||self;function f(a,b){function c(...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.73'}, 'title']}
-2025-01-31 14:06:36,975 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/execute/sync HTTP/11" 200 0
-2025-01-31 14:06:36,976 Remote response: status=200 | data={"value":"Nickelodeon Nick Jr Dora the Explorer Night Light with Boots - Soft Glow 14z"} | headers=HTTPHeaderDict({'Content-Length': '88', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:36,976 Finished Request
-2025-01-31 14:06:36,976 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.71/element {'using': 'css selector', 'value': '.dne-itemtile-price'}
-2025-01-31 14:06:36,982 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.71/element HTTP/11" 200 0
-2025-01-31 14:06:36,982 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.74"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:36,982 Finished Request
-2025-01-31 14:06:36,982 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.74/element {'using': 'css selector', 'value': '.first'}
-2025-01-31 14:06:36,989 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.74/element HTTP/11" 200 0
-2025-01-31 14:06:36,989 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.75"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:36,990 Finished Request
-2025-01-31 14:06:36,990 GET http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.75/text {}
-2025-01-31 14:06:36,998 http://localhost:63105 "GET /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.75/text HTTP/11" 200 0
-2025-01-31 14:06:36,999 Remote response: status=200 | data={"value":"US $9.39"} | headers=HTTPHeaderDict({'Content-Length': '20', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:36,999 Finished Request
-2025-01-31 14:06:36,999 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.37/element {'using': 'css selector', 'value': '.dne-itemtile-imagewrapper'}
-2025-01-31 14:06:37,006 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.37/element HTTP/11" 200 0
-2025-01-31 14:06:37,006 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.76"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,006 Finished Request
-2025-01-31 14:06:37,006 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.76/element {'using': 'tag name', 'value': 'img'}
-2025-01-31 14:06:37,013 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.76/element HTTP/11" 200 0
-2025-01-31 14:06:37,013 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.77"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,014 Finished Request
-2025-01-31 14:06:37,014 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/execute/sync {'script': '/* getAttribute */return (function(){return (function(){var d=this||self;function f(a,b){function c(...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.77'}, 'src']}
-2025-01-31 14:06:37,018 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/execute/sync HTTP/11" 200 0
-2025-01-31 14:06:37,018 Remote response: status=200 | data={"value":"https://i.ebayimg.com/images/g/eJcAAOSwxBVnjiz7/s-l300.jpg"} | headers=HTTPHeaderDict({'Content-Length': '70', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,018 Finished Request
-2025-01-31 14:06:37,018 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.37/element {'using': 'css selector', 'value': '.dne-itemtile-detail'}
-2025-01-31 14:06:37,024 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.37/element HTTP/11" 200 0
-2025-01-31 14:06:37,024 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.78"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,025 Finished Request
-2025-01-31 14:06:37,025 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.78/element {'using': 'tag name', 'value': 'a'}
-2025-01-31 14:06:37,030 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.78/element HTTP/11" 200 0
-2025-01-31 14:06:37,030 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.79"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,031 Finished Request
-2025-01-31 14:06:37,031 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/execute/sync {'script': '/* getAttribute */return (function(){return (function(){var d=this||self;function f(a,b){function c(...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.79'}, 'href']}
-2025-01-31 14:06:37,036 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/execute/sync HTTP/11" 200 0
-2025-01-31 14:06:37,036 Remote response: status=200 | data={"value":"https://www.ebay.com/itm/335606583601?_trkparms=5079%3A5000014571"} | headers=HTTPHeaderDict({'Content-Length': '77', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,036 Finished Request
-2025-01-31 14:06:37,036 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.79/element {'using': 'tag name', 'value': 'h3'}
-2025-01-31 14:06:37,043 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.79/element HTTP/11" 200 0
-2025-01-31 14:06:37,043 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.80"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,044 Finished Request
-2025-01-31 14:06:37,044 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/execute/sync {'script': '/* getAttribute */return (function(){return (function(){var d=this||self;function f(a,b){function c(...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.80'}, 'title']}
-2025-01-31 14:06:37,052 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/execute/sync HTTP/11" 200 0
-2025-01-31 14:06:37,052 Remote response: status=200 | data={"value":"DEWALT DCG415BR 20V MAX XR 4-1/2-5\" Small Angle Grinder BT Certified Refurbished"} | headers=HTTPHeaderDict({'Content-Length': '93', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,052 Finished Request
-2025-01-31 14:06:37,052 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.78/element {'using': 'css selector', 'value': '.dne-itemtile-price'}
-2025-01-31 14:06:37,060 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.78/element HTTP/11" 200 0
-2025-01-31 14:06:37,061 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.81"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,061 Finished Request
-2025-01-31 14:06:37,061 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.81/element {'using': 'css selector', 'value': '.first'}
-2025-01-31 14:06:37,067 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.81/element HTTP/11" 200 0
-2025-01-31 14:06:37,068 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.82"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,068 Finished Request
-2025-01-31 14:06:37,068 GET http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.82/text {}
-2025-01-31 14:06:37,074 http://localhost:63105 "GET /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.82/text HTTP/11" 200 0
-2025-01-31 14:06:37,075 Remote response: status=200 | data={"value":"US $188.99"} | headers=HTTPHeaderDict({'Content-Length': '22', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,075 Finished Request
-2025-01-31 14:06:37,075 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.38/element {'using': 'css selector', 'value': '.dne-itemtile-imagewrapper'}
-2025-01-31 14:06:37,080 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.38/element HTTP/11" 200 0
-2025-01-31 14:06:37,080 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.83"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,081 Finished Request
-2025-01-31 14:06:37,081 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.83/element {'using': 'tag name', 'value': 'img'}
-2025-01-31 14:06:37,088 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.83/element HTTP/11" 200 0
-2025-01-31 14:06:37,088 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.84"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,088 Finished Request
-2025-01-31 14:06:37,088 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/execute/sync {'script': '/* getAttribute */return (function(){return (function(){var d=this||self;function f(a,b){function c(...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.84'}, 'src']}
-2025-01-31 14:06:37,095 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/execute/sync HTTP/11" 200 0
-2025-01-31 14:06:37,095 Remote response: status=200 | data={"value":"https://i.ebayimg.com/images/g/Q2cAAOSwkP9hp6A6/s-l300.jpg"} | headers=HTTPHeaderDict({'Content-Length': '70', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,095 Finished Request
-2025-01-31 14:06:37,095 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.38/element {'using': 'css selector', 'value': '.dne-itemtile-detail'}
-2025-01-31 14:06:37,103 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.38/element HTTP/11" 200 0
-2025-01-31 14:06:37,103 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.85"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,103 Finished Request
-2025-01-31 14:06:37,104 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.85/element {'using': 'tag name', 'value': 'a'}
-2025-01-31 14:06:37,110 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.85/element HTTP/11" 200 0
-2025-01-31 14:06:37,110 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.86"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,110 Finished Request
-2025-01-31 14:06:37,111 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/execute/sync {'script': '/* getAttribute */return (function(){return (function(){var d=this||self;function f(a,b){function c(...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.86'}, 'href']}
-2025-01-31 14:06:37,116 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/execute/sync HTTP/11" 200 0
-2025-01-31 14:06:37,116 Remote response: status=200 | data={"value":"https://www.ebay.com/itm/334043426792?_trkparms=5079%3A5000014571"} | headers=HTTPHeaderDict({'Content-Length': '77', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,116 Finished Request
-2025-01-31 14:06:37,116 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.86/element {'using': 'tag name', 'value': 'h3'}
-2025-01-31 14:06:37,123 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.86/element HTTP/11" 200 0
-2025-01-31 14:06:37,123 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.87"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,123 Finished Request
-2025-01-31 14:06:37,123 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/execute/sync {'script': '/* getAttribute */return (function(){return (function(){var d=this||self;function f(a,b){function c(...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.87'}, 'title']}
-2025-01-31 14:06:37,127 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/execute/sync HTTP/11" 200 0
-2025-01-31 14:06:37,128 Remote response: status=200 | data={"value":"DEWALT DCS368B 20V MAX XR BL Reciprocating Saw w/ POWER DETECT (Tool Only) New"} | headers=HTTPHeaderDict({'Content-Length': '90', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,128 Finished Request
-2025-01-31 14:06:37,128 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.85/element {'using': 'css selector', 'value': '.dne-itemtile-price'}
-2025-01-31 14:06:37,134 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.85/element HTTP/11" 200 0
-2025-01-31 14:06:37,134 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.88"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,134 Finished Request
-2025-01-31 14:06:37,134 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.88/element {'using': 'css selector', 'value': '.first'}
-2025-01-31 14:06:37,143 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.88/element HTTP/11" 200 0
-2025-01-31 14:06:37,143 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.89"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,143 Finished Request
-2025-01-31 14:06:37,143 GET http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.89/text {}
-2025-01-31 14:06:37,152 http://localhost:63105 "GET /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.89/text HTTP/11" 200 0
-2025-01-31 14:06:37,152 Remote response: status=200 | data={"value":"US $234.99"} | headers=HTTPHeaderDict({'Content-Length': '22', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,152 Finished Request
-2025-01-31 14:06:37,152 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.39/element {'using': 'css selector', 'value': '.dne-itemtile-imagewrapper'}
-2025-01-31 14:06:37,160 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.39/element HTTP/11" 200 0
-2025-01-31 14:06:37,160 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.90"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,160 Finished Request
-2025-01-31 14:06:37,160 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.90/element {'using': 'tag name', 'value': 'img'}
-2025-01-31 14:06:37,166 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.90/element HTTP/11" 200 0
-2025-01-31 14:06:37,166 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.91"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,167 Finished Request
-2025-01-31 14:06:37,167 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/execute/sync {'script': '/* getAttribute */return (function(){return (function(){var d=this||self;function f(a,b){function c(...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.91'}, 'src']}
-2025-01-31 14:06:37,171 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/execute/sync HTTP/11" 200 0
-2025-01-31 14:06:37,171 Remote response: status=200 | data={"value":"https://i.ebayimg.com/images/g/aOEAAOSwOC5muD2j/s-l300.jpg"} | headers=HTTPHeaderDict({'Content-Length': '70', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,171 Finished Request
-2025-01-31 14:06:37,171 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.39/element {'using': 'css selector', 'value': '.dne-itemtile-detail'}
-2025-01-31 14:06:37,177 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.39/element HTTP/11" 200 0
-2025-01-31 14:06:37,177 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.92"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,177 Finished Request
-2025-01-31 14:06:37,177 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.92/element {'using': 'tag name', 'value': 'a'}
-2025-01-31 14:06:37,183 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.92/element HTTP/11" 200 0
-2025-01-31 14:06:37,183 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.93"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,183 Finished Request
-2025-01-31 14:06:37,183 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/execute/sync {'script': '/* getAttribute */return (function(){return (function(){var d=this||self;function f(a,b){function c(...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.93'}, 'href']}
-2025-01-31 14:06:37,189 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/execute/sync HTTP/11" 200 0
-2025-01-31 14:06:37,189 Remote response: status=200 | data={"value":"https://www.ebay.com/itm/176309711040?_trkparms=5079%3A5000014571"} | headers=HTTPHeaderDict({'Content-Length': '77', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,189 Finished Request
-2025-01-31 14:06:37,189 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.93/element {'using': 'tag name', 'value': 'h3'}
-2025-01-31 14:06:37,197 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.93/element HTTP/11" 200 0
-2025-01-31 14:06:37,197 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.94"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,197 Finished Request
-2025-01-31 14:06:37,197 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/execute/sync {'script': '/* getAttribute */return (function(){return (function(){var d=this||self;function f(a,b){function c(...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.94'}, 'title']}
-2025-01-31 14:06:37,202 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/execute/sync HTTP/11" 200 0
-2025-01-31 14:06:37,203 Remote response: status=200 | data={"value":"OVER 2000 Teacher Motivational Stickers (4 packs of 504) - Unique Stickers! /13z"} | headers=HTTPHeaderDict({'Content-Length': '92', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,203 Finished Request
-2025-01-31 14:06:37,203 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.92/element {'using': 'css selector', 'value': '.dne-itemtile-price'}
-2025-01-31 14:06:37,209 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.92/element HTTP/11" 200 0
-2025-01-31 14:06:37,209 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.95"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,210 Finished Request
-2025-01-31 14:06:37,210 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.95/element {'using': 'css selector', 'value': '.first'}
-2025-01-31 14:06:37,215 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.95/element HTTP/11" 200 0
-2025-01-31 14:06:37,216 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.96"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,216 Finished Request
-2025-01-31 14:06:37,216 GET http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.96/text {}
-2025-01-31 14:06:37,223 http://localhost:63105 "GET /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.96/text HTTP/11" 200 0
-2025-01-31 14:06:37,223 Remote response: status=200 | data={"value":"US $8.88"} | headers=HTTPHeaderDict({'Content-Length': '20', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,223 Finished Request
-2025-01-31 14:06:37,223 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.40/element {'using': 'css selector', 'value': '.dne-itemtile-imagewrapper'}
-2025-01-31 14:06:37,229 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.40/element HTTP/11" 200 0
-2025-01-31 14:06:37,229 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.97"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,229 Finished Request
-2025-01-31 14:06:37,229 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.97/element {'using': 'tag name', 'value': 'img'}
-2025-01-31 14:06:37,236 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.97/element HTTP/11" 200 0
-2025-01-31 14:06:37,236 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.98"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,236 Finished Request
-2025-01-31 14:06:37,236 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/execute/sync {'script': '/* getAttribute */return (function(){return (function(){var d=this||self;function f(a,b){function c(...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.98'}, 'src']}
-2025-01-31 14:06:37,242 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/execute/sync HTTP/11" 200 0
-2025-01-31 14:06:37,243 Remote response: status=200 | data={"value":"https://i.ebayimg.com/images/g/d-kAAOSwL6Bl5Igb/s-l300.jpg"} | headers=HTTPHeaderDict({'Content-Length': '70', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,243 Finished Request
-2025-01-31 14:06:37,243 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.40/element {'using': 'css selector', 'value': '.dne-itemtile-detail'}
-2025-01-31 14:06:37,251 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.40/element HTTP/11" 200 0
-2025-01-31 14:06:37,251 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.99"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,251 Finished Request
-2025-01-31 14:06:37,251 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.99/element {'using': 'tag name', 'value': 'a'}
-2025-01-31 14:06:37,257 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.99/element HTTP/11" 200 0
-2025-01-31 14:06:37,258 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.100"}} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,258 Finished Request
-2025-01-31 14:06:37,258 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/execute/sync {'script': '/* getAttribute */return (function(){return (function(){var d=this||self;function f(a,b){function c(...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.100'}, 'href']}
-2025-01-31 14:06:37,262 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/execute/sync HTTP/11" 200 0
-2025-01-31 14:06:37,262 Remote response: status=200 | data={"value":"https://www.ebay.com/itm/176268404388?_trkparms=5079%3A5000014571"} | headers=HTTPHeaderDict({'Content-Length': '77', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,262 Finished Request
-2025-01-31 14:06:37,262 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.100/element {'using': 'tag name', 'value': 'h3'}
-2025-01-31 14:06:37,268 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.100/element HTTP/11" 200 0
-2025-01-31 14:06:37,268 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.101"}} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,268 Finished Request
-2025-01-31 14:06:37,269 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/execute/sync {'script': '/* getAttribute */return (function(){return (function(){var d=this||self;function f(a,b){function c(...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.101'}, 'title']}
-2025-01-31 14:06:37,273 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/execute/sync HTTP/11" 200 0
-2025-01-31 14:06:37,273 Remote response: status=200 | data={"value":"2pk FurRemover Reusable Dog & Cat Hair Lint Dander Remover for Laundry 12z"} | headers=HTTPHeaderDict({'Content-Length': '86', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,273 Finished Request
-2025-01-31 14:06:37,274 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.99/element {'using': 'css selector', 'value': '.dne-itemtile-price'}
-2025-01-31 14:06:37,279 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.99/element HTTP/11" 200 0
-2025-01-31 14:06:37,279 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.102"}} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,280 Finished Request
-2025-01-31 14:06:37,280 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.102/element {'using': 'css selector', 'value': '.first'}
-2025-01-31 14:06:37,286 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.102/element HTTP/11" 200 0
-2025-01-31 14:06:37,286 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.103"}} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,286 Finished Request
-2025-01-31 14:06:37,287 GET http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.103/text {}
-2025-01-31 14:06:37,295 http://localhost:63105 "GET /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.103/text HTTP/11" 200 0
-2025-01-31 14:06:37,295 Remote response: status=200 | data={"value":"US $8.88"} | headers=HTTPHeaderDict({'Content-Length': '20', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,296 Finished Request
-2025-01-31 14:06:37,296 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.41/element {'using': 'css selector', 'value': '.dne-itemtile-imagewrapper'}
-2025-01-31 14:06:37,303 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.41/element HTTP/11" 200 0
-2025-01-31 14:06:37,303 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.104"}} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,303 Finished Request
-2025-01-31 14:06:37,303 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.104/element {'using': 'tag name', 'value': 'img'}
-2025-01-31 14:06:37,310 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.104/element HTTP/11" 200 0
-2025-01-31 14:06:37,310 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.105"}} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,310 Finished Request
-2025-01-31 14:06:37,311 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/execute/sync {'script': '/* getAttribute */return (function(){return (function(){var d=this||self;function f(a,b){function c(...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.105'}, 'src']}
-2025-01-31 14:06:37,315 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/execute/sync HTTP/11" 200 0
-2025-01-31 14:06:37,315 Remote response: status=200 | data={"value":"https://i.ebayimg.com/images/g/COQAAOSwf~BnFDHW/s-l300.jpg"} | headers=HTTPHeaderDict({'Content-Length': '70', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,315 Finished Request
-2025-01-31 14:06:37,315 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.41/element {'using': 'css selector', 'value': '.dne-itemtile-detail'}
-2025-01-31 14:06:37,321 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.41/element HTTP/11" 200 0
-2025-01-31 14:06:37,321 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.106"}} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,321 Finished Request
-2025-01-31 14:06:37,321 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.106/element {'using': 'tag name', 'value': 'a'}
-2025-01-31 14:06:37,328 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.106/element HTTP/11" 200 0
-2025-01-31 14:06:37,328 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.107"}} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,328 Finished Request
-2025-01-31 14:06:37,328 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/execute/sync {'script': '/* getAttribute */return (function(){return (function(){var d=this||self;function f(a,b){function c(...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.107'}, 'href']}
-2025-01-31 14:06:37,332 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/execute/sync HTTP/11" 200 0
-2025-01-31 14:06:37,332 Remote response: status=200 | data={"value":"https://www.ebay.com/itm/176637783852?_trkparms=5079%3A5000014571"} | headers=HTTPHeaderDict({'Content-Length': '77', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,332 Finished Request
-2025-01-31 14:06:37,333 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.107/element {'using': 'tag name', 'value': 'h3'}
-2025-01-31 14:06:37,352 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.107/element HTTP/11" 200 0
-2025-01-31 14:06:37,352 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.108"}} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,352 Finished Request
-2025-01-31 14:06:37,352 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/execute/sync {'script': '/* getAttribute */return (function(){return (function(){var d=this||self;function f(a,b){function c(...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.108'}, 'title']}
-2025-01-31 14:06:37,358 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/execute/sync HTTP/11" 200 0
-2025-01-31 14:06:37,358 Remote response: status=200 | data={"value":"LARGE 2.5 oz Bag of YELLOW Easter Grass, Easter Basket Filler 9z"} | headers=HTTPHeaderDict({'Content-Length': '76', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,358 Finished Request
-2025-01-31 14:06:37,358 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.106/element {'using': 'css selector', 'value': '.dne-itemtile-price'}
-2025-01-31 14:06:37,364 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.106/element HTTP/11" 200 0
-2025-01-31 14:06:37,364 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.109"}} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,365 Finished Request
-2025-01-31 14:06:37,365 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.109/element {'using': 'css selector', 'value': '.first'}
-2025-01-31 14:06:37,370 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.109/element HTTP/11" 200 0
-2025-01-31 14:06:37,370 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.110"}} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,370 Finished Request
-2025-01-31 14:06:37,370 GET http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.110/text {}
-2025-01-31 14:06:37,376 http://localhost:63105 "GET /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.110/text HTTP/11" 200 0
-2025-01-31 14:06:37,376 Remote response: status=200 | data={"value":"US $8.88"} | headers=HTTPHeaderDict({'Content-Length': '20', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,376 Finished Request
-2025-01-31 14:06:37,377 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.42/element {'using': 'css selector', 'value': '.dne-itemtile-imagewrapper'}
-2025-01-31 14:06:37,383 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.42/element HTTP/11" 200 0
-2025-01-31 14:06:37,383 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.111"}} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,383 Finished Request
-2025-01-31 14:06:37,383 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.111/element {'using': 'tag name', 'value': 'img'}
-2025-01-31 14:06:37,393 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.111/element HTTP/11" 200 0
-2025-01-31 14:06:37,394 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.112"}} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,394 Finished Request
-2025-01-31 14:06:37,394 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/execute/sync {'script': '/* getAttribute */return (function(){return (function(){var d=this||self;function f(a,b){function c(...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.112'}, 'src']}
-2025-01-31 14:06:37,400 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/execute/sync HTTP/11" 200 0
-2025-01-31 14:06:37,400 Remote response: status=200 | data={"value":"https://i.ebayimg.com/images/g/Xe0AAOSw7D5nFC3M/s-l300.jpg"} | headers=HTTPHeaderDict({'Content-Length': '70', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,400 Finished Request
-2025-01-31 14:06:37,401 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.42/element {'using': 'css selector', 'value': '.dne-itemtile-detail'}
-2025-01-31 14:06:37,407 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.42/element HTTP/11" 200 0
-2025-01-31 14:06:37,407 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.113"}} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,408 Finished Request
-2025-01-31 14:06:37,408 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.113/element {'using': 'tag name', 'value': 'a'}
-2025-01-31 14:06:37,414 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.113/element HTTP/11" 200 0
-2025-01-31 14:06:37,415 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.114"}} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,415 Finished Request
-2025-01-31 14:06:37,415 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/execute/sync {'script': '/* getAttribute */return (function(){return (function(){var d=this||self;function f(a,b){function c(...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.114'}, 'href']}
-2025-01-31 14:06:37,419 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/execute/sync HTTP/11" 200 0
-2025-01-31 14:06:37,444 Remote response: status=200 | data={"value":"https://www.ebay.com/itm/176637771447?_trkparms=5079%3A5000014571"} | headers=HTTPHeaderDict({'Content-Length': '77', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,444 Finished Request
-2025-01-31 14:06:37,444 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.114/element {'using': 'tag name', 'value': 'h3'}
-2025-01-31 14:06:37,456 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.114/element HTTP/11" 200 0
-2025-01-31 14:06:37,456 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.115"}} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,456 Finished Request
-2025-01-31 14:06:37,457 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/execute/sync {'script': '/* getAttribute */return (function(){return (function(){var d=this||self;function f(a,b){function c(...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.115'}, 'title']}
-2025-01-31 14:06:37,463 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/execute/sync HTTP/11" 200 0
-2025-01-31 14:06:37,463 Remote response: status=200 | data={"value":"LARGE 2.5 oz Bag of Purple Easter Grass, Easter Basket Filler 9z"} | headers=HTTPHeaderDict({'Content-Length': '76', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,463 Finished Request
-2025-01-31 14:06:37,464 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.113/element {'using': 'css selector', 'value': '.dne-itemtile-price'}
-2025-01-31 14:06:37,470 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.113/element HTTP/11" 200 0
-2025-01-31 14:06:37,470 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.116"}} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,470 Finished Request
-2025-01-31 14:06:37,471 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.116/element {'using': 'css selector', 'value': '.first'}
-2025-01-31 14:06:37,476 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.116/element HTTP/11" 200 0
-2025-01-31 14:06:37,476 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.117"}} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,476 Finished Request
-2025-01-31 14:06:37,477 GET http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.117/text {}
-2025-01-31 14:06:37,484 http://localhost:63105 "GET /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.117/text HTTP/11" 200 0
-2025-01-31 14:06:37,484 Remote response: status=200 | data={"value":"US $8.88"} | headers=HTTPHeaderDict({'Content-Length': '20', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,485 Finished Request
-2025-01-31 14:06:37,485 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.43/element {'using': 'css selector', 'value': '.dne-itemtile-imagewrapper'}
-2025-01-31 14:06:37,496 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.43/element HTTP/11" 200 0
-2025-01-31 14:06:37,496 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.118"}} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,496 Finished Request
-2025-01-31 14:06:37,496 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.118/element {'using': 'tag name', 'value': 'img'}
-2025-01-31 14:06:37,505 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.118/element HTTP/11" 200 0
-2025-01-31 14:06:37,505 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.119"}} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,506 Finished Request
-2025-01-31 14:06:37,506 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/execute/sync {'script': '/* getAttribute */return (function(){return (function(){var d=this||self;function f(a,b){function c(...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.119'}, 'src']}
-2025-01-31 14:06:37,512 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/execute/sync HTTP/11" 200 0
-2025-01-31 14:06:37,512 Remote response: status=200 | data={"value":"https://i.ebayimg.com/images/g/3qIAAOSwaDVmD3L-/s-l300.jpg"} | headers=HTTPHeaderDict({'Content-Length': '70', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,512 Finished Request
-2025-01-31 14:06:37,512 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.43/element {'using': 'css selector', 'value': '.dne-itemtile-detail'}
-2025-01-31 14:06:37,519 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.43/element HTTP/11" 200 0
-2025-01-31 14:06:37,519 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.120"}} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,519 Finished Request
-2025-01-31 14:06:37,520 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.120/element {'using': 'tag name', 'value': 'a'}
-2025-01-31 14:06:37,526 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.120/element HTTP/11" 200 0
-2025-01-31 14:06:37,526 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.121"}} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,526 Finished Request
-2025-01-31 14:06:37,526 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/execute/sync {'script': '/* getAttribute */return (function(){return (function(){var d=this||self;function f(a,b){function c(...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.121'}, 'href']}
-2025-01-31 14:06:37,530 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/execute/sync HTTP/11" 200 0
-2025-01-31 14:06:37,530 Remote response: status=200 | data={"value":"https://www.ebay.com/itm/404902782907?_trkparms=5079%3A5000014571"} | headers=HTTPHeaderDict({'Content-Length': '77', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,530 Finished Request
-2025-01-31 14:06:37,530 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.121/element {'using': 'tag name', 'value': 'h3'}
-2025-01-31 14:06:37,539 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.121/element HTTP/11" 200 0
-2025-01-31 14:06:37,539 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.122"}} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,539 Finished Request
-2025-01-31 14:06:37,539 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/execute/sync {'script': '/* getAttribute */return (function(){return (function(){var d=this||self;function f(a,b){function c(...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.122'}, 'title']}
-2025-01-31 14:06:37,544 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/execute/sync HTTP/11" 200 0
-2025-01-31 14:06:37,544 Remote response: status=200 | data={"value":"Nickelodeon Nick Jr Dora the Explorer Night Light w/Boots Adorable Soft Glow 14z"} | headers=HTTPHeaderDict({'Content-Length': '92', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,544 Finished Request
-2025-01-31 14:06:37,544 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.120/element {'using': 'css selector', 'value': '.dne-itemtile-price'}
-2025-01-31 14:06:37,552 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.120/element HTTP/11" 200 0
-2025-01-31 14:06:37,553 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.123"}} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,553 Finished Request
-2025-01-31 14:06:37,553 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.123/element {'using': 'css selector', 'value': '.first'}
-2025-01-31 14:06:37,559 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.123/element HTTP/11" 200 0
-2025-01-31 14:06:37,560 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.124"}} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,560 Finished Request
-2025-01-31 14:06:37,560 GET http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.124/text {}
-2025-01-31 14:06:37,567 http://localhost:63105 "GET /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.124/text HTTP/11" 200 0
-2025-01-31 14:06:37,567 Remote response: status=200 | data={"value":"US $9.39"} | headers=HTTPHeaderDict({'Content-Length': '20', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,567 Finished Request
-2025-01-31 14:06:37,567 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.44/element {'using': 'css selector', 'value': '.dne-itemtile-imagewrapper'}
-2025-01-31 14:06:37,576 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.44/element HTTP/11" 200 0
-2025-01-31 14:06:37,576 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.125"}} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,577 Finished Request
-2025-01-31 14:06:37,577 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.125/element {'using': 'tag name', 'value': 'img'}
-2025-01-31 14:06:37,586 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.125/element HTTP/11" 200 0
-2025-01-31 14:06:37,587 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.126"}} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,587 Finished Request
-2025-01-31 14:06:37,587 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/execute/sync {'script': '/* getAttribute */return (function(){return (function(){var d=this||self;function f(a,b){function c(...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.126'}, 'src']}
-2025-01-31 14:06:37,593 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/execute/sync HTTP/11" 200 0
-2025-01-31 14:06:37,593 Remote response: status=200 | data={"value":"https://i.ebayimg.com/images/g/hmEAAOSwIVZmD3Tz/s-l300.jpg"} | headers=HTTPHeaderDict({'Content-Length': '70', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,594 Finished Request
-2025-01-31 14:06:37,594 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.44/element {'using': 'css selector', 'value': '.dne-itemtile-detail'}
-2025-01-31 14:06:37,603 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.44/element HTTP/11" 200 0
-2025-01-31 14:06:37,603 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.127"}} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,603 Finished Request
-2025-01-31 14:06:37,603 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.127/element {'using': 'tag name', 'value': 'a'}
-2025-01-31 14:06:37,611 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.127/element HTTP/11" 200 0
-2025-01-31 14:06:37,611 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.128"}} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,611 Finished Request
-2025-01-31 14:06:37,611 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/execute/sync {'script': '/* getAttribute */return (function(){return (function(){var d=this||self;function f(a,b){function c(...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.128'}, 'href']}
-2025-01-31 14:06:37,617 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/execute/sync HTTP/11" 200 0
-2025-01-31 14:06:37,617 Remote response: status=200 | data={"value":"https://www.ebay.com/itm/176320358079?_trkparms=5079%3A5000014571"} | headers=HTTPHeaderDict({'Content-Length': '77', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,617 Finished Request
-2025-01-31 14:06:37,617 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.128/element {'using': 'tag name', 'value': 'h3'}
-2025-01-31 14:06:37,623 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.128/element HTTP/11" 200 0
-2025-01-31 14:06:37,623 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.129"}} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,623 Finished Request
-2025-01-31 14:06:37,623 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/execute/sync {'script': '/* getAttribute */return (function(){return (function(){var d=this||self;function f(a,b){function c(...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.129'}, 'title']}
-2025-01-31 14:06:37,628 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/execute/sync HTTP/11" 200 0
-2025-01-31 14:06:37,628 Remote response: status=200 | data={"value":"Nickelodeon Nick Jr Dora the Explorer Night Light Adorable Balloons SoftGlow 14z"} | headers=HTTPHeaderDict({'Content-Length': '92', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,628 Finished Request
-2025-01-31 14:06:37,628 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.127/element {'using': 'css selector', 'value': '.dne-itemtile-price'}
-2025-01-31 14:06:37,634 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.127/element HTTP/11" 200 0
-2025-01-31 14:06:37,634 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.130"}} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,634 Finished Request
-2025-01-31 14:06:37,634 POST http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.130/element {'using': 'css selector', 'value': '.first'}
-2025-01-31 14:06:37,642 http://localhost:63105 "POST /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.130/element HTTP/11" 200 0
-2025-01-31 14:06:37,642 Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.131"}} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,642 Finished Request
-2025-01-31 14:06:37,642 GET http://localhost:63105/session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.131/text {}
-2025-01-31 14:06:37,651 http://localhost:63105 "GET /session/91f42e76d26bd82471d97875cd07eb12/element/f.21B503D67B2B5BD7732440E7BAD09161.d.C6B40DE127340BB4FEE0E0C9534945F8.e.131/text HTTP/11" 200 0
-2025-01-31 14:06:37,651 Remote response: status=200 | data={"value":"US $9.39"} | headers=HTTPHeaderDict({'Content-Length': '20', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2025-01-31 14:06:37,651 Finished Request
-2025-01-31 14:06:37,652 products scrap completed.
-2025-01-31 14:06:37,670 products details saved in csv file.
+2025-02-02 08:52:09,163 Selenium Manager binary found at: /Users/workspace/Documents/Scrapping/env/lib/python3.9/site-packages/selenium/webdriver/common/macos/selenium-manager
+2025-02-02 08:52:09,164 Executing process: /Users/workspace/Documents/Scrapping/env/lib/python3.9/site-packages/selenium/webdriver/common/macos/selenium-manager --browser chrome --debug --language-binding python --output json
+2025-02-02 08:52:09,455 Sending stats to Plausible: Props { browser: "chrome", browser_version: "", os: "macos", arch: "x86_64", lang: "python", selenium_version: "4.27" }
+2025-02-02 08:52:09,455 chromedriver not found in PATH
+2025-02-02 08:52:09,455 chrome detected at /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+2025-02-02 08:52:09,456 Running command: /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --version
+2025-02-02 08:52:09,456 Output: "Google Chrome 132.0.6834.160 "
+2025-02-02 08:52:09,456 Detected browser: chrome 132.0.6834.160
+2025-02-02 08:52:09,456 Discovering versions from https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json
+2025-02-02 08:52:09,456 There was an error managing chromedriver (error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json)); using driver found in the cache
+2025-02-02 08:52:09,456 Error sending stats to Plausible: error sending request for url (https://plausible.io/api/event)
+2025-02-02 08:52:09,456 Driver path: /Users/workspace/.cache/selenium/chromedriver/mac-x64/132.0.6834.159/chromedriver
+2025-02-02 08:52:09,456 Browser path: /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+2025-02-02 08:52:09,460 Started executable: `/Users/workspace/.cache/selenium/chromedriver/mac-x64/132.0.6834.159/chromedriver` in a child process with pid: 2170 using 0 to output -3
+2025-02-02 08:52:09,538 POST http://localhost:62202/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'chrome', 'pageLoadStrategy': <PageLoadStrategy.normal: 'normal'>, 'browserVersion': None, 'goog:chromeOptions': {'extensions': [], 'binary': '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome', 'args': []}}}}
+2025-02-02 08:52:09,538 Starting new HTTP connection (1): localhost:62202
+2025-02-02 08:52:11,562 http://localhost:62202 "POST /session HTTP/11" 200 0
+2025-02-02 08:52:11,586 Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"132.0.6834.160","chrome":{"chromedriverVersion":"132.0.6834.159 (2d77d3fc4452661469b78f115e0aed4d71269739-refs/branch-heads/6834@{#4408})","userDataDir":"/var/folders/rg/pg4rq_g14lbdyft_jz32yq980000gn/T/.org.chromium.Chromium.aJq46Z"},"fedcm:accounts":true,"goog:chromeOptions":{"debuggerAddress":"localhost:62209"},"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"mac","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"39195dce716149591592ff5939fe71a3"}} | headers=HTTPHeaderDict({'Content-Length': '892', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-02-02 08:52:11,603 Finished Request
+2025-02-02 08:52:11,621 POST http://localhost:62202/session/39195dce716149591592ff5939fe71a3/url {'url': 'https://www.ebay.com/globaldeals/home/more-home-garden'}
+2025-02-02 08:52:11,912 http://localhost:62202 "POST /session/39195dce716149591592ff5939fe71a3/url HTTP/11" 500 0
+2025-02-02 08:52:11,925 Remote response: status=500 | data={"value":{"error":"unknown error","message":"unknown error: net::ERR_INTERNET_DISCONNECTED\n  (Session info: chrome=132.0.6834.160)","stacktrace":"0   chromedriver                        0x0000000105c0c278 chromedriver + 5522040\n1   chromedriver                        0x0000000105c040ea chromedriver + 5488874\n2   chromedriver                        0x0000000105729620 chromedriver + 398880\n3   chromedriver                        0x00000001057215ba chromedriver + 366010\n4   chromedriver                        0x00000001057118b8 chromedriver + 301240\n5   chromedriver                        0x0000000105713594 chromedriver + 308628\n6   chromedriver                        0x0000000105711b5a chromedriver + 301914\n7   chromedriver                        0x000000010571165f chromedriver + 300639\n8   chromedriver                        0x0000000105711361 chromedriver + 299873\n9   chromedriver                        0x000000010570f34f chromedriver + 291663\n10  chromedriver                        0x000000010570f9ca chromedriver + 293322\n11  chromedriver                        0x000000010572c009 chromedriver + 409609\n12  chromedriver                        0x00000001057bdea5 chromedriver + 1007269\n13  chromedriver                        0x000000010579e362 chromedriver + 877410\n14  chromedriver                        0x00000001057bd230 chromedriver + 1004080\n15  chromedriver                        0x000000010579e103 chromedriver + 876803\n16  chromedriver                        0x000000010576b010 chromedriver + 667664\n17  chromedriver                        0x000000010576c28e chromedriver + 672398\n18  chromedriver                        0x0000000105bd2060 chromedriver + 5283936\n19  chromedriver                        0x0000000105bd5f90 chromedriver + 5300112\n20  chromedriver                        0x0000000105bb3d37 chromedriver + 5160247\n21  chromedriver                        0x0000000105bd6a1e chromedriver + 5302814\n22  chromedriver                        0x0000000105ba39b4 chromedriver + 5093812\n23  chromedriver                        0x0000000105bf2608 chromedriver + 5416456\n24  chromedriver                        0x0000000105bf27c6 chromedriver + 5416902\n25  chromedriver                        0x0000000105c03cc8 chromedriver + 5487816\n26  libsystem_pthread.dylib             0x00007ff80f0fc253 _pthread_start + 99\n27  libsystem_pthread.dylib             0x00007ff80f0f7bef thread_start + 15\n"}} | headers=HTTPHeaderDict({'Content-Length': '2452', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-02-02 08:52:11,926 Finished Request
+2025-02-02 08:52:11,944 Error while scrapping the data : Message: unknown error: net::ERR_INTERNET_DISCONNECTED
+  (Session info: chrome=132.0.6834.160)
+Stacktrace:
+0   chromedriver                        0x0000000105c0c278 chromedriver + 5522040
+1   chromedriver                        0x0000000105c040ea chromedriver + 5488874
+2   chromedriver                        0x0000000105729620 chromedriver + 398880
+3   chromedriver                        0x00000001057215ba chromedriver + 366010
+4   chromedriver                        0x00000001057118b8 chromedriver + 301240
+5   chromedriver                        0x0000000105713594 chromedriver + 308628
+6   chromedriver                        0x0000000105711b5a chromedriver + 301914
+7   chromedriver                        0x000000010571165f chromedriver + 300639
+8   chromedriver                        0x0000000105711361 chromedriver + 299873
+9   chromedriver                        0x000000010570f34f chromedriver + 291663
+10  chromedriver                        0x000000010570f9ca chromedriver + 293322
+11  chromedriver                        0x000000010572c009 chromedriver + 409609
+12  chromedriver                        0x00000001057bdea5 chromedriver + 1007269
+13  chromedriver                        0x000000010579e362 chromedriver + 877410
+14  chromedriver                        0x00000001057bd230 chromedriver + 1004080
+15  chromedriver                        0x000000010579e103 chromedriver + 876803
+16  chromedriver                        0x000000010576b010 chromedriver + 667664
+17  chromedriver                        0x000000010576c28e chromedriver + 672398
+18  chromedriver                        0x0000000105bd2060 chromedriver + 5283936
+19  chromedriver                        0x0000000105bd5f90 chromedriver + 5300112
+20  chromedriver                        0x0000000105bb3d37 chromedriver + 5160247
+21  chromedriver                        0x0000000105bd6a1e chromedriver + 5302814
+22  chromedriver                        0x0000000105ba39b4 chromedriver + 5093812
+23  chromedriver                        0x0000000105bf2608 chromedriver + 5416456
+24  chromedriver                        0x0000000105bf27c6 chromedriver + 5416902
+25  chromedriver                        0x0000000105c03cc8 chromedriver + 5487816
+26  libsystem_pthread.dylib             0x00007ff80f0fc253 _pthread_start + 99
+27  libsystem_pthread.dylib             0x00007ff80f0f7bef thread_start + 15
+Traceback (most recent call last):
+  File "/Users/workspace/Documents/Scrapping/Price-Scraper-for-E-commerce-Websites/script.py", line 136, in get_products
+    self.driver.get(f'{category_path}')
+  File "/Users/workspace/Documents/Scrapping/env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 393, in get
+    self.execute(Command.GET, {"url": url})
+  File "/Users/workspace/Documents/Scrapping/env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 384, in execute
+    self.error_handler.check_response(response)
+  File "/Users/workspace/Documents/Scrapping/env/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_INTERNET_DISCONNECTED
+  (Session info: chrome=132.0.6834.160)
+Stacktrace:
+0   chromedriver                        0x0000000105c0c278 chromedriver + 5522040
+1   chromedriver                        0x0000000105c040ea chromedriver + 5488874
+2   chromedriver                        0x0000000105729620 chromedriver + 398880
+3   chromedriver                        0x00000001057215ba chromedriver + 366010
+4   chromedriver                        0x00000001057118b8 chromedriver + 301240
+5   chromedriver                        0x0000000105713594 chromedriver + 308628
+6   chromedriver                        0x0000000105711b5a chromedriver + 301914
+7   chromedriver                        0x000000010571165f chromedriver + 300639
+8   chromedriver                        0x0000000105711361 chromedriver + 299873
+9   chromedriver                        0x000000010570f34f chromedriver + 291663
+10  chromedriver                        0x000000010570f9ca chromedriver + 293322
+11  chromedriver                        0x000000010572c009 chromedriver + 409609
+12  chromedriver                        0x00000001057bdea5 chromedriver + 1007269
+13  chromedriver                        0x000000010579e362 chromedriver + 877410
+14  chromedriver                        0x00000001057bd230 chromedriver + 1004080
+15  chromedriver                        0x000000010579e103 chromedriver + 876803
+16  chromedriver                        0x000000010576b010 chromedriver + 667664
+17  chromedriver                        0x000000010576c28e chromedriver + 672398
+18  chromedriver                        0x0000000105bd2060 chromedriver + 5283936
+19  chromedriver                        0x0000000105bd5f90 chromedriver + 5300112
+20  chromedriver                        0x0000000105bb3d37 chromedriver + 5160247
+21  chromedriver                        0x0000000105bd6a1e chromedriver + 5302814
+22  chromedriver                        0x0000000105ba39b4 chromedriver + 5093812
+23  chromedriver                        0x0000000105bf2608 chromedriver + 5416456
+24  chromedriver                        0x0000000105bf27c6 chromedriver + 5416902
+25  chromedriver                        0x0000000105c03cc8 chromedriver + 5487816
+26  libsystem_pthread.dylib             0x00007ff80f0fc253 _pthread_start + 99
+27  libsystem_pthread.dylib             0x00007ff80f0f7bef thread_start + 15
+
+2025-02-02 08:52:11,961 Error while handing dynamic categories urls or static url local variable 'products_details' referenced before assignment
+Traceback (most recent call last):
+  File "/Users/workspace/Documents/Scrapping/Price-Scraper-for-E-commerce-Websites/script.py", line 219, in scrape_data
+    scrapped_data = self.get_products()
+  File "/Users/workspace/Documents/Scrapping/Price-Scraper-for-E-commerce-Websites/script.py", line 178, in get_products
+    return products_details
+UnboundLocalError: local variable 'products_details' referenced before assignment
+2025-02-02 08:52:11,979 products details saved in csv file.
